@@ -1,0 +1,141 @@
+body {
+    position: relative;
+}
+header {
+    background: #ffbf4c;
+    border-bottom: 5px solid purple;
+    color: white;
+    align-items: center;
+    display: flex;
+    position: relative;
+}
+header h1 {
+    padding-left: 50px;
+}
+.icon-menu {
+    position: absolute;
+    right: 0;
+    margin-right: 50px;
+    top: 50%;
+    margin-top: -17.5px;
+    font-size: 35px;
+}
+nav {
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    z-index: 1;
+    background-color: black;
+    margin-top: 5px;
+}
+nav ul {
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+nav ul li a {
+    display: block;
+    padding: 10px 30px;
+    color: white;
+    text-decoration: none;
+    font-size: 22px;
+}
+.close {
+    display: none;
+}
+.open {
+    display: block;
+}
+* {
+    transition: all .5s ease-in-out;
+}
+#projectsList {
+    max-width: 1200px;
+    margin: 20px auto 20px auto;
+}
+.portfolioBox {
+    position: relative;
+    align-items: center;
+    background-size: 100% 100%;
+    height: 300px;
+    overflow: hidden;
+    color: white;
+    transform: rotate(0deg);
+}
+.portfolioBox:hover {
+    background-size: 150% 150%;
+    background-position: center;
+    transform: rotate(360deg);
+}
+.bgOverlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #4f1a57;
+    opacity: 0.75;
+    z-index: 0;
+}
+.portfolioBox:hover .bgOverlay {
+    background-color: #3c71c0;
+    opacity: 0.95;
+}
+.frontSide {
+    font-size: 35px;
+    text-align: center;
+}
+.backSide {
+    font-size: 22px;
+}
+.backSide ul {
+    padding-right: 20px;
+}
+.frontSide, .backSide {
+    color: white;
+    margin: auto;
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    top: 50%;
+}
+.backSide, .portfolioBox:hover .frontSide {
+    opacity: 0;
+    transform: translateY(-50%) scale(0.25);
+}
+.frontSide, .portfolioBox:hover .backSide {
+    opacity: 1;
+    transform: translateY(-50%) scale(1);
+}
+@media only screen and (min-width: 768px) {
+    header h1 {
+        width: 30%;
+        padding-left: 100px;
+    }
+    header nav {
+        width: 70%;
+        position: relative;
+        background-color: transparent;
+        margin: 0;
+    }
+    .main-menu {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 100px 0 0;
+    }
+    .icon {
+        display: none;
+    }
+    .main-menu.close, .main-menu.open {
+        display: flex;
+    }
+    #projectsList {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .portfolioBox {
+        width: 32.5%;
+    }
+}
