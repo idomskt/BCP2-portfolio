@@ -7,8 +7,8 @@ function Portfolio(name, photo, link, description) {
 
 var portfolios = [];
 
-portfolios.push(new Portfolio('Hamburger Menu', '/images/mobilemenu.jpg', '', 'I have created a breakpoint after 768px to display the mobile menu. step 2'));
-portfolios.push(new Portfolio('Mobile First', '/images/mobilefirst.jpg', '', 'I started to design this site with mobile first in mind. This site will look good on any screen size includes smartphones, tablets and desktops'));
+portfolios.push(new Portfolio('Hamburger Menu', '/images/mobilemenu.jpg', '', 'I have created a breakpoint at 768px. The mobile hamburger menu will be displayed up to 768px and will be hidden after that breakpoint'));
+portfolios.push(new Portfolio('Mobile First', '/images/mobilefirst.jpg', '', 'I started to design this site with mobile first in mind. This site will look good on any screen size includes smartphones, tablets and desktops. I have created a seperate CSS files for each device'));
 
 var menuIcon = document.getElementsByClassName('icon')[0];
 

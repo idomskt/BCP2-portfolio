@@ -41,6 +41,12 @@ nav ul li a {
     text-decoration: none;
     font-size: 22px;
 }
+.icon-linkedin, .icon-github {
+    font-size: 0px;
+}
+nav ul li a:hover .icon-linkedin {
+    font-size: inherit;
+}
 .close {
     display: none;
 }
