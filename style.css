@@ -1,7 +1,7 @@
 body {
     position: relative;
 }
-.template {
+.template, .close {
     display: none;
 }
 header {
@@ -50,9 +50,6 @@ nav ul li a {
 nav ul li a:hover .icon-linkedin {
     font-size: inherit;
 }
-.close {
-    display: none;
-}
 .open {
     display: block;
 }
@@ -62,8 +59,10 @@ nav ul li a:hover .icon-linkedin {
 #projectsList {
     max-width: 1200px;
     margin: 20px auto 20px auto;
+    display: flex;
+    flex-wrap: wrap;
 }
-.portfolioBox {
+.projectBox {
     position: relative;
     align-items: center;
     background-size: 100% 100%;
@@ -71,8 +70,9 @@ nav ul li a:hover .icon-linkedin {
     overflow: hidden;
     color: white;
     transform: rotate(0deg);
+    width: 100%;
 }
-.portfolioBox:hover {
+.projectBox:hover {
     background-size: 150% 150%;
     background-position: center;
     transform: rotate(360deg);
@@ -83,12 +83,12 @@ nav ul li a:hover .icon-linkedin {
     height: 100%;
     top: 0;
     left: 0;
-    background-color: #4f1a57;
+    /* background-color: #4f1a57; */
     opacity: 0.75;
     z-index: 0;
 }
-.portfolioBox:hover .bgOverlay {
-    background-color: #3c71c0;
+.projectBox:hover .bgOverlay {
+    /* background-color: #3c71c0; */
     opacity: 0.95;
 }
 .frontSide {
@@ -98,7 +98,7 @@ nav ul li a:hover .icon-linkedin {
 .backSide {
     font-size: 22px;
 }
-.backSide ul {
+.backSide ol {
     padding-right: 20px;
 }
 .frontSide, .backSide {
@@ -109,11 +109,11 @@ nav ul li a:hover .icon-linkedin {
     width: 100%;
     top: 50%;
 }
-.backSide, .portfolioBox:hover .frontSide {
+.backSide, .projectBox:hover .frontSide {
     opacity: 0;
     transform: translateY(-50%) scale(0.25);
 }
-.frontSide, .portfolioBox:hover .backSide {
+.frontSide, .projectBox:hover .backSide {
     opacity: 1;
     transform: translateY(-50%) scale(1);
 }
@@ -144,7 +144,7 @@ nav ul li a:hover .icon-linkedin {
         flex-wrap: wrap;
         justify-content: space-between;
     }
-    .portfolioBox {
+    .projectBox {
         width: 32.5%;
     }
 }
