@@ -1,6 +1,9 @@
 body {
     position: relative;
 }
+.template {
+    display: none;
+}
 header {
     background: #ffbf4c;
     border-bottom: 5px solid purple;
