@@ -117,34 +117,3 @@ nav ul li a:hover .icon-linkedin {
     opacity: 1;
     transform: translateY(-50%) scale(1);
 }
-@media only screen and (min-width: 768px) {
-    header h1 {
-        width: 30%;
-        padding-left: 100px;
-    }
-    header nav {
-        width: 70%;
-        position: relative;
-        background-color: transparent;
-        margin: 0;
-    }
-    .main-menu {
-    display: flex;
-    justify-content: flex-end;
-    margin: 0 100px 0 0;
-    }
-    .icon {
-        display: none;
-    }
-    .main-menu.close, .main-menu.open {
-        display: flex;
-    }
-    #projectsList {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
-    .projectBox {
-        width: 32.5%;
-    }
-}
