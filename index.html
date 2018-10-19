@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/breakpoint768.css">
     <link rel="stylesheet" href="https://i.icomoon.io/public/temp/4b4dccbd78/UntitledProject/style.css">
     <title>Portfolio</title>
 </head>
@@ -20,10 +21,20 @@
     </header>
     <main>
         <div id="projectsList">
-            
+            <div class="projectBox template">
+                <div class="bgOverlay"></div>
+                <div class="frontSide">
+                    <h3 class="projectName"></h3>
+                </div>
+                <div class="backSide">
+                    <ol class="projectInstructions"></ol>
+                </div>
+            </div>
 
         </div>
     </main>
-    <script src="scripts.js"></script>
+    <script src="scripts/jquery-3.3.1.min.js"></script>
+    <script src="scripts/projectsData.js"></script>
+    <script src="scripts/scripts.js"></script>
 </body>
 </html>
