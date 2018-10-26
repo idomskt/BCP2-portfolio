@@ -13,14 +13,14 @@
                 <h3 class="projectName">{{name}}</h3>
             </div>
             <div class="backSide">
-                <ol class="projectInstructions"><li>{{{description}}}</li></ol>
+                {{{printItems description}}}
             </div>
         </div>
     </script>
     <title>Portfolio</title>
 </head>
 <body>
-    <div class="front"><h1 class="fsTitle"><em>"Programs must be written for people to read, and only incidentally for machines to execute.”</em></h1><img src="/images/frontBG.png" alt=""></div>
+    <!-- <div class="front"><h1 class="fsTitle"><em>"Programs must be written for people to read, and only incidentally for machines to execute.”</em></h1><img src="/images/frontBG.png" alt=""></div> -->
     <header>
         <h1>Ido Moskovits</h1>
         <span class="icon-menu icon"></span>
@@ -37,8 +37,9 @@
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.min.js"></script>
     <script src="scripts/jquery-3.3.1.min.js"></script>
-    <script src="scripts/projectsData.js"></script>
+    <script src="scripts/portfolios.js"></script>
     <script src="scripts/scripts.js"></script>
     <script src="scripts/projectHover.js"></script>
+    <script src="scripts/load-scripts.js"></script>
 </body>
 </html>
