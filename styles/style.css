@@ -147,3 +147,46 @@ nav ul li a:hover .icon-linkedin {
     opacity: 1;
     transform: translateY(-50%) scale(1);
 }
+.copyNewCode, .copiedFeedback {
+    display: none;
+}
+.copiedFeedback {
+    color: green;
+}
+.new-portfolio main {
+    max-width: 960px;
+    margin: auto;
+}
+.new-portfolio form label {
+    width: 100%;
+    display: block;
+    font-size: 24px;
+    margin-bottom: 24px;
+}
+.new-portfolio input, .new-portfolio textarea {
+    width: 100%;
+    padding: 15px;
+    background-color: #f7f7f7;
+    border: 3px solid #f1f1f1;
+    font-size: 24px;
+}
+#portfolio-description {
+    height: 300px;
+}
+#form-button {
+    width: 300px;
+    background-color: green;
+    color: white;
+    padding: 24px;
+    cursor: pointer;
+}
+.copyNewCode {
+    max-width: 500px;
+    margin: 50px auto;
+    position: relative;
+}
+.copyNewCode textarea {
+    max-width: 500px;
+    height: 300px;
+    box-sizing: border-box;
+}

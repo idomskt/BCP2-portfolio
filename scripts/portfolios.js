@@ -21,6 +21,7 @@ Portfolio.allPortfolios = function(rawData) {
 Portfolio.printToScreen = function() {
     Portfolio.all.forEach(function (eachPortfolio) {
         $('#projectsList').append(eachPortfolio.toHtml());
+        
     });
 }
 

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Add New Portfolio</title>
+</head>
+<body class="new-portfolio">
+    <header>
+        <h1>Ido Moskovits</h1>
+        <span class="icon-menu icon"></span>
+        <nav>
+            <ul class="main-menu close">
+                <li><a class="linkedIn" href=""><span class="icon-linkedin"></span> Linkedin</a></li>
+                <li><a class="gitHub" href=""><span class="icon-github"></span> Github</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Add New Portfolio</h1>
+        <form action="">
+            <label for="portfolio-name">Name:<br><input type="text" name="portfolio-name" id="portfolio-name"></label>
+            <label for="portfolio-photo">Photo:<br><input type="text" name="portfolio-photo" id="portfolio-photo"></label>
+            <label for="portfolio-url">URL:<br><input type="text" name="portfolio-url" id="portfolio-url"></label>
+            <label for="portfolio-description">Description:<br><input type="text" name="portfolio-description" id="portfolio-description"></label>
+            <input type="button" value="Generate Code" id="form-button">
+        </form>
+        <div class="copyNewCode">
+            <textarea class="generatedCode"></textarea>
+            <button id="copy-new-portfolio">Copy The Code</button>
+            <p class="copiedFeedback">Your Code Is Ready!</p>
+        </div>
+    </main>
+    <script src="scripts/jquery-3.3.1.min.js"></script>
+    <script src="scripts/new-portfolio.js"></script>
+</body>
+</html>
