@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/idomskt/BCP2-portfolio#readme",
   "dependencies": {
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "pg": "^7.6.0"
   }
 }

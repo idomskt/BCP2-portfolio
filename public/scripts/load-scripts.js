@@ -3,13 +3,13 @@ function loadScripts(){
     // heroScreen();
     hoverColorForPorjectBox();
     toggleMenu();
+    
     $('.projectBox').on('click', buildExpand);
-
-
+    
     $('.projectBox').each(function(){
         randomColor($(this));
-    })
-
+    });
+    
 }
 
 

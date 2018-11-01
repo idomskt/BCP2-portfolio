@@ -8,7 +8,6 @@ Handlebars.registerHelper("printItems", function(items) {
     return html;
   });
 
-
 function heroScreen() {
     setTimeout(function(){
         $('.fsTitle').css("opacity", "1");
