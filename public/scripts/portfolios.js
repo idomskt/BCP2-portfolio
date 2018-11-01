@@ -31,7 +31,7 @@ Portfolio.fetchContent = function() {
            Portfolio.printToScreen();
     } else {
        function getJSON() {
-           $.get("../JSON/projectsData.json", showJSON);
+           $.get("/JSON/projectsData.json", showJSON);
        }
        getJSON();
        function showJSON(response) {
