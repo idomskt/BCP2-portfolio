@@ -38,3 +38,38 @@ function toggleMenu() {
         menuList.classList.add('close');
     }
 }
+
+function sortByRating() {
+    console.log($(this).val());
+    const selectVal = $(this).val();
+    if(selectVal == 'easyFirst'){
+        $(".projectBox").sort(sort_project).appendTo('#projectsList');
+        function sort_project(a, b){
+        return ($(b).data('rating')) < ($(a).data('rating')) ? 1 : -1;    
+        }
+    } else if (selectVal == 'hardFirst'){
+        $(".projectBox").sort(sort_project).appendTo('#projectsList');
+        function sort_project(a, b){
+        return ($(b).data('rating')) > ($(a).data('rating')) ? 1 : -1;    
+        }
+    } else {
+        $('#projectsList').html('');
+        Portfolio.printToScreen();
+        $('.projectBox').on('click', buildExpand);
+        $('.projectBox').each(function(){
+            randomColor($(this));
+            loadStars($(this));
+        });
+        
+    }
+}
+
+function loadStars(elem){
+
+    console.log(elem.data('rating'));
+
+    let portfolioRating = elem.data('rating');
+    for (var i = 0; i < portfolioRating; i++) {
+        elem.find('.rating').append('<i class="fas fa-star"></i>');
+    }
+}

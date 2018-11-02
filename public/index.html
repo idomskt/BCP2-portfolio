@@ -5,17 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/breakpoint768.css">
-    <link rel="stylesheet" href="https://i.icomoon.io/public/temp/4b4dccbd78/UntitledProject/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
     <script id="portfolio-template" type="text/x-handlebars-template">
-        <div class="projectBox" data-project="{{name}}" style="background-image: url({{{photo}}})">
-            <div class="bgOverlay"></div>
-            <div class="frontSide">
-                <h3 class="projectName">{{name}}</h3>
-            </div>
-            <div class="backSide">
-                {{{printItems description}}}
-                <p>Click For More Details</p>
-            </div>
+        <div class="projectBox" data-project="{{name}}" data-rating="{{starRating}}" style="background-image: url({{{photo}}})">
+                <div class="bgOverlay"></div>
+                <div class="frontSide">
+                    <h3 class="projectName">{{name}}</h3>
+                </div>
+                <div class="backSide">
+                    {{{printItems description}}}
+                    <p>Click For More Details</p>
+                </div>
+            <p class='rating'>Challenge level: {{starRating}}/5</p>
         </div>
     </script>
     <title>Portfolio</title>
@@ -33,7 +34,16 @@
         </nav>
     </header>
     <main>
-        <div id="projectsList"></div>
+        <div class="filterAndSorting">
+            <p class="sortRating">Sort By</p>
+            <select class="sortDropDown">
+                    <option value="Date">Date</option>
+                    <option value="easyFirst">Easy To Hard</option>
+                    <option value="hardFirst">Hard To Easy</option>
+            </select>
+        </div>
+        <div id="projectsList">
+        </div>
         <div class="descriptionBox">
             <div class="popup"></div>
         </div>

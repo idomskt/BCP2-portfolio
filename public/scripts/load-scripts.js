@@ -8,8 +8,9 @@ function loadScripts(){
     
     $('.projectBox').each(function(){
         randomColor($(this));
+        loadStars($(this));
     });
-    
+    $('.sortDropDown').on('change', sortByRating);
 }
 
 

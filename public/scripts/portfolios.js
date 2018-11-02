@@ -3,6 +3,7 @@ function Portfolio(portfoliosParameters) {
     this.photo = portfoliosParameters.photo;
     this.link = portfoliosParameters.link;
     this.description = portfoliosParameters.description;
+    this.starRating = portfoliosParameters.starRating;
 }
 Portfolio.all = [];
 

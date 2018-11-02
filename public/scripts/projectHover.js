@@ -16,8 +16,6 @@ function buildExpand(e) {
     $(popup).append(exitBTN);
     $(descAndIMGWrapper).append(popupDesc);
     $(descAndIMGWrapper).append(popupIMG);
-    console.log($(this).find('h3').text());
-    console.log(e);
     exitPopupFunc();
 }
 function exitPopupFunc() {
