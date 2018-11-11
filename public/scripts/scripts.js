@@ -40,7 +40,6 @@ function toggleMenu() {
 }
 
 function sortByRating() {
-    console.log($(this).val());
     const selectVal = $(this).val();
     if(selectVal == 'easyFirst'){
         $(".projectBox").sort(sort_project).appendTo('#projectsList');
@@ -64,10 +63,23 @@ function sortByRating() {
     }
 }
 
+
+function sortByLanguage() {
+    const selectVal = $(this).val();
+    $('.projectBox').show();
+    $('.projectBox').each(function(i, obj) {
+        if(!(selectVal == 'All')) {
+            if(!($(obj).data('language') == selectVal)) {
+                $(obj).hide();
+            }
+        } else {
+            $('.projectBox').show();
+        }
+    });
+}
+
+
 function loadStars(elem){
-
-    console.log(elem.data('rating'));
-
     let portfolioRating = elem.data('rating');
     for (var i = 0; i < portfolioRating; i++) {
         elem.find('.rating').append('<i class="fas fa-star"></i>');

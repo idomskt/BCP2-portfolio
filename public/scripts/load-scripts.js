@@ -10,7 +10,8 @@ function loadScripts(){
         randomColor($(this));
         loadStars($(this));
     });
-    $('.sortDropDown').on('change', sortByRating);
+    $('.sortLanguage').on('change', sortByLanguage);
+    $('.sortByRating').on('change', sortByRating);
 }
 
 

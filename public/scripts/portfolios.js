@@ -4,6 +4,7 @@ function Portfolio(portfoliosParameters) {
     this.link = portfoliosParameters.link;
     this.description = portfoliosParameters.description;
     this.starRating = portfoliosParameters.starRating;
+    this.language = portfoliosParameters.language;
 }
 Portfolio.all = [];
 
