@@ -18,6 +18,15 @@ function heroScreen() {
     }, 9000);
 };
 
+const frontPage = () => {
+    $('#projectsList').show();
+    $('#about').hide();
+}
+const aboutPage = () => {
+    $('#projectsList').hide();
+    $('#about').show();
+}
+
 function randomColor(elem) {
     elem.find('.bgOverlay').css('background-color', '#'+(Math.random()*0xFFFFFF<<0).toString(16));
 }
@@ -63,7 +72,6 @@ function sortByRating() {
     }
 }
 
-
 function sortByLanguage() {
     const selectVal = $(this).val();
     $('.projectBox').show();
@@ -77,7 +85,6 @@ function sortByLanguage() {
         }
     });
 }
-
 
 function loadStars(elem){
     let portfolioRating = elem.data('rating');
