@@ -19,11 +19,11 @@ function heroScreen() {
 };
 
 const frontPage = () => {
-    $('#projectsList').show();
+    $('.allProjects').show();
     $('#about').hide();
 }
 const aboutPage = () => {
-    $('#projectsList').hide();
+    $('.allProjects').hide();
     $('#about').show();
 }
 
@@ -37,58 +37,20 @@ function hoverColorForPorjectBox() {
     });
 };
 
-function toggleMenu() {
-    var menuList = document.getElementsByClassName('main-menu')[0];
-    if(menuList.classList.contains('close')) {
-        menuList.classList.remove('close');
-        menuList.classList.add('open');
-    } else {
-        menuList.classList.remove('open');
-        menuList.classList.add('close');
-    }
-}
+stats = {};
+stats.all = [];
 
-function sortByRating() {
-    const selectVal = $(this).val();
-    if(selectVal == 'easyFirst'){
-        $(".projectBox").sort(sort_project).appendTo('#projectsList');
-        function sort_project(a, b){
-        return ($(b).data('rating')) < ($(a).data('rating')) ? 1 : -1;    
-        }
-    } else if (selectVal == 'hardFirst'){
-        $(".projectBox").sort(sort_project).appendTo('#projectsList');
-        function sort_project(a, b){
-        return ($(b).data('rating')) > ($(a).data('rating')) ? 1 : -1;    
-        }
-    } else {
-        $('#projectsList').html('');
-        Portfolio.printToScreen();
-        $('.projectBox').on('click', buildExpand);
-        $('.projectBox').each(function(){
-            randomColor($(this));
-            loadStars($(this));
-        });
-        
-    }
-}
+const getGHData = $.getJSON('https://api.github.com/users/idomskt/repos')
+.then(data => data.map(repoName => {stats.all.push(repoName.name)}));
 
-function sortByLanguage() {
-    const selectVal = $(this).val();
-    $('.projectBox').show();
-    $('.projectBox').each(function(i, obj) {
-        if(!(selectVal == 'All')) {
-            if(!($(obj).data('language') == selectVal)) {
-                $(obj).hide();
-            }
-        } else {
-            $('.projectBox').show();
-        }
+repoList = () => {
+    const ul = $('<ul>');
+    stats.all.map(eachRepo => {
+        return ul.append($('<li>').text(eachRepo))
     });
+    $('.stats').append(ul);
 }
-
-function loadStars(elem){
-    let portfolioRating = elem.data('rating');
-    for (var i = 0; i < portfolioRating; i++) {
-        elem.find('.rating').append('<i class="fas fa-star"></i>');
-    }
+function selectPortfolioView() {
+    $('.sliderOuter').toggle();
+    $('.gridView').toggle();
 }

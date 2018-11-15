@@ -57,6 +57,48 @@ nav ul li a:hover .icon-linkedin {
 * {
     transition: all .5s ease-in-out;
 }
+.screenFiller {
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+}
+.screenFiller ul {
+    display: flex;
+    max-width: 800px;
+    position: absolute;
+    width: 100%;
+    padding: 0;
+    list-style: none;
+    left: 50%;
+    justify-content: space-between;
+    transform: translateX(-50%);
+    bottom: 200px;
+}
+.screenFiller li {
+    width: 48%;
+    text-align: center;
+    color: grey;
+    border-top: 2px solid grey;
+    border-bottom: 2px solid black;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.screenFiller a {
+    color: grey;
+    font-size: 40px;
+    text-decoration: none;
+}
+.screenFiller li:hover {
+    border-top: 2px solid black;
+    border-bottom: 2px solid #ffbf4c;
+}
+.screenFiller li:hover a {
+    color: #ffbf4c;
+}
 .front {
     position: absolute;
     width: 100%;
@@ -268,4 +310,63 @@ text-align: center;
     color: black;
     font-size: 30px;
     border-radius: 4px;
+}
+:root {
+    --scroll-left: -400px;
+    --scroll-right: 0px;
+}
+.slider .projectBox:hover {
+    transform: none;
+}
+.centerImage, .slider .centerImage:hover {
+    transform: scale(1.4);
+    z-index: 5;
+    box-shadow: 0px 0px 10px 3px #b3b3b3;
+}
+.movingImageLeft {
+    margin-left: var(--scroll-left);
+}
+.movingImageRight {
+    margin-left: var(--scroll-right);
+}
+.sliderOuter {
+    position: relative;
+}
+.slider {
+    max-width: 1200px;
+    align-items: center;
+    height: 600px;
+    display: flex;
+    margin: auto;
+    overflow: hidden;
+}
+.visibleSlider {
+    display: flex;
+}
+.slider .projectBox {
+    width: 400px;
+}
+.sliderNav {
+    position: absolute;
+    bottom: 0;
+    transform: translateX(-50%);
+    left: 50%;
+    width: 1350px;
+    top: 50%;
+    justify-content: space-between;
+    height: 50px;
+}
+.sliderNav button {
+font-size: 30px;
+border: none;
+}
+.sliderNav button:hover {
+    transition-duration: 0.25s; 
+    transform: scale(1.4);
+}
+.sliderNav button:focus {
+    outline: none;
+}
+.nextBTN {
+    float: right;
 }

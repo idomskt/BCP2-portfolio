@@ -36,23 +36,57 @@
         </nav>
     </header>
     <main>
-        <div class="filterAndSorting">
-            <p class="sortRating">Sort By</p>
-            <select class="sortByRating sortDropDown">
-                    <option value="Date">Date</option>
-                    <option value="easyFirst">Easy To Hard</option>
-                    <option value="hardFirst">Hard To Easy</option>
-            </select>
-            <select class="sortLanguage sortDropDown">
-                <option value="All">All</option>
-                <option value="HTML">HTML</option>
-                <option value="JavaScript">JavaScript</option>
-                <option value="CSS">CSS</option>
-                <option value="jQuery">jQuery</option>
-            </select>
+        <div class="screenFiller">
+            <ul>
+                <li><a href="/">Projects</a></li>
+                <li><a href="/about">About</a></li>
+            </ul>
         </div>
-        <div id="projectsList"></div>
-        <div id="about"><h1>ABOUT ME</h1></div>
+        <section class="hero">
+            <div class="inner"></div>
+        </section>
+        <!-- <section class="allProjects">
+            <div class="filterAndSorting">
+                <p class="sortRating">Sort By</p>
+                <select class="sortByRating sortDropDown">
+                        <option value="Date">Date</option>
+                        <option value="easyFirst">Easy To Hard</option>
+                        <option value="hardFirst">Hard To Easy</option>
+                </select>
+                <select class="sortLanguage sortDropDown">
+                    <option value="All">All</option>
+                    <option value="HTML">HTML</option>
+                    <option value="JavaScript">JavaScript</option>
+                    <option value="CSS">CSS</option>
+                    <option value="jQuery">jQuery</option>
+                </select>
+            </div>
+            <div id="projectsList"></div>
+        </section> -->
+        <section class="portfolioDisplay">
+            <div class="sliderOuter"><div class="slider"><div class="visibleSlider"></div></div><div class='sliderNav'><button class='prevBTN'><i class="fas fa-arrow-left"></i></button><button class='nextBTN'><i class="fas fa-arrow-right"></i></button></div></div>
+            <div class="gridView">
+                <div class="filterAndSorting">
+                    <p class="sortRating">Sort By</p>
+                    <select class="sortByRating sortDropDown">
+                            <option value="Date">Date</option>
+                            <option value="easyFirst">Easy To Hard</option>
+                            <option value="hardFirst">Hard To Easy</option>
+                    </select>
+                    <select class="sortLanguage sortDropDown">
+                        <option value="All">All</option>
+                        <option value="HTML">HTML</option>
+                        <option value="JavaScript">JavaScript</option>
+                        <option value="CSS">CSS</option>
+                        <option value="jQuery">jQuery</option>
+                    </select>
+                </div>
+                <div id="projectsList"></div>
+            </div>
+            <button class="selectView">View As Grid</button>
+        </section>
+
+        <section id="about"><h1>ABOUT ME</h1><div class="stats"></div></section>
         <div class="descriptionBox">
             <div class="popup"></div>
         </div>
@@ -62,6 +96,9 @@
     <script src="scripts/portfolios.js"></script>
     <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
     <script src="scripts/scripts.js"></script>
+    <script src="scripts/sorting.js"></script>
+    <script src="scripts/mobile.js"></script>
+    <script src="scripts/slider.js"></script>
     <script src="/scripts/paths.js"></script>
     <script src="scripts/projectHover.js"></script>
     <script src="scripts/load-scripts.js"></script>
