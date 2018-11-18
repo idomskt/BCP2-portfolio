@@ -22,48 +22,37 @@
     <title>Portfolio</title>
 </head>
 <body>
-    <!-- <div class="front"><h1 class="fsTitle"><em>"Programs must be written for people to read, and only incidentally for machines to execute.”</em></h1><img src="/images/frontBG.png" alt=""></div> -->
     <header>
-        <h1>Ido Moskovits</h1>
-        <span class="icon-menu icon"></span>
-        <nav>
-            <ul class="main-menu close">
-                <li><a href="/">Projects</a></li>
-                <li><a href="/about">About</a></li>
-                <li><a class="linkedIn" href=""><span class="icon-linkedin"></span> Linkedin</a></li>
-                <li><a class="gitHub" href=""><span class="icon-github"></span> Github</a></li>
-            </ul>
-        </nav>
+        <div class="headerInner">
+            <div class="menuOpener"><i class="fas fa-bars"></i></div>
+            <span class="icon-menu icon"></span>
+            <nav>
+                <ul class="main-menu close">
+                    <li><a href="/">Projects</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/new-portfolio">New</a></li>
+                    <li><a class="linkedIn" href=""><span class="icon-linkedin"></span> Linkedin</a></li>
+                    <li><a class="gitHub" href=""><span class="icon-github"></span> Github</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
     <main>
-        <div class="screenFiller">
+        <section class="screenFiller">
+            <h1>Ido Moskovits</h1>
             <ul>
                 <li><a href="/">Projects</a></li>
                 <li><a href="/about">About</a></li>
+                <li><a href="#connect">Connect</a></li>
             </ul>
-        </div>
+        </section>
         <section class="hero">
             <div class="inner"></div>
         </section>
-        <!-- <section class="allProjects">
-            <div class="filterAndSorting">
-                <p class="sortRating">Sort By</p>
-                <select class="sortByRating sortDropDown">
-                        <option value="Date">Date</option>
-                        <option value="easyFirst">Easy To Hard</option>
-                        <option value="hardFirst">Hard To Easy</option>
-                </select>
-                <select class="sortLanguage sortDropDown">
-                    <option value="All">All</option>
-                    <option value="HTML">HTML</option>
-                    <option value="JavaScript">JavaScript</option>
-                    <option value="CSS">CSS</option>
-                    <option value="jQuery">jQuery</option>
-                </select>
-            </div>
-            <div id="projectsList"></div>
-        </section> -->
-        <section class="portfolioDisplay">
+        <section class="portfolioDisplay outer">
+            <h2>Portfolios</h2>
+            <h3>Pharetra suscipit totam magni ornare tortor parturient, habitasse animi eu, laboriosam tempora error egestas! Rem</h3>
+            <div class="selectView">View As: <button class="sliderViewBTN"><i class="far fa-image"></i><i class="far fa-image"></i><i class="far fa-image"></i></button><button class="gridViewBTN"><i class="fas fa-th"></i></button></div>
             <div class="sliderOuter"><div class="slider"><div class="visibleSlider"></div></div><div class='sliderNav'><button class='prevBTN'><i class="fas fa-arrow-left"></i></button><button class='nextBTN'><i class="fas fa-arrow-right"></i></button></div></div>
             <div class="gridView">
                 <div class="filterAndSorting">
@@ -83,10 +72,26 @@
                 </div>
                 <div id="projectsList"></div>
             </div>
-            <button class="selectView">View As Grid</button>
         </section>
 
-        <section id="about"><h1>ABOUT ME</h1><div class="stats"></div></section>
+        <section id="about">
+            <div class="aboutMeInfo">
+                <h1>ABOUT ME</h1>
+                <div class="aboutMeContent">
+                    <p class="fadeIn">Eu hac placerat porro placeat aperiam, facere beatae lacus phasellus, autem primis, voluptatum natus porta atque interdum nesciunt? Aliquid expedita? Aptent temporibus sociosqu nibh, pellentesque repellendus, lacus, atque voluptatibus doloribus. Dolorem, minim expedita sapien arcu bibendum. Pulvinar mollit earum modi, rutrum class, ullamcorper diamlorem molestie? Minim. Optio molestiae, rem accusantium dicta feugiat esse senectus officia, litora quia eos nobis error. Ut molestias dis inventore scelerisque qui donec euismod distinctio nemo numquam lobortis? Litora mattis, esse culpa, sed dolore sed facilis, quam rhoncus labore saepe tincidunt cupiditate ridiculus? Sint, mus tempus, deserunt. Justo delectus vitae laboris. Eaque? Primis. Ipsa, beatae congue.</p>
+                    <button>View Repositories</button>
+                    <div class="stats"></div>
+                </div>
+            </div>
+            <div class="aboutMeIMG">
+                <img src="https://scontent-sea1-1.xx.fbcdn.net/v/t1.0-9/11149582_10205651296174782_5296853466123847545_n.jpg?_nc_cat=103&_nc_ht=scontent-sea1-1.xx&oh=268452673205b9633d0d48158c171282&oe=5C669542" alt="">
+                <div class="bgOverlay"></div>
+            </div>
+        </section>
+        <section id="connect">
+
+        </section>
+
         <div class="descriptionBox">
             <div class="popup"></div>
         </div>

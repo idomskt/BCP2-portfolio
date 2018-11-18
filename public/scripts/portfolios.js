@@ -22,8 +22,15 @@ Portfolio.allPortfolios = function(rawData) {
 
 Portfolio.printToScreen = function() {
     Portfolio.all.forEach(function (eachPortfolio) {
-        $('#projectsList').append(eachPortfolio.toHtml());
         $('.visibleSlider').append(eachPortfolio.toHtml());
+        $('#projectsList').append(eachPortfolio.toHtml());
+        
+    });
+}
+Portfolio.printToScreenGrid = function() {
+    Portfolio.all.forEach(function (eachPortfolio) {
+        // $('.visibleSlider').append(eachPortfolio.toHtml());
+        $('#projectsList').append(eachPortfolio.toHtml());
         
     });
 }

@@ -1,24 +1,51 @@
 @media only screen and (min-width: 768px) {
-    header h1 {
-        width: 30%;
-        padding-left: 100px;
+    header {
+        position: fixed;
+        z-index: 5;
+        background-color: #ffbf4c;
+        height: 100vh;
     }
-    header nav {
-        width: 70%;
+    .headerInner {
+        width: 0;
         position: relative;
-        background-color: transparent;
+    }
+    header ul, header li, header a {
+        opacity: 0;
+        z-index: -1;
+        list-style: none;
+    }
+    header a {
+        font-size: 24px;
+    }
+    .menuOpener {
+    font-size: 35px;
+    position: relative;
+    width: 35px;
+    margin-left: auto;
+    color: white;
+    margin-right: -40px;
+    }
+    .menuOpener i {
+        position: absolute;
+    background-color: black;
+    padding: 5px;
+    z-index: 1;
+    }
+    .openMenu, .openMenu ul, .openMenu li, .openMenu a {
+        width: 300px;
+        opacity: 1;
+        z-index: 1;
+    }
+    .openMenu ul {
         margin: 0;
+        padding: 0 15px;
+        box-sizing: border-box;
     }
-    .main-menu {
-    display: flex;
-    justify-content: flex-end;
-    margin: 0 100px 0 0;
-    }
-    .icon {
-        display: none;
-    }
-    .main-menu.close, .main-menu.open {
-        display: flex;
+    .openMenu li {
+        padding: 20px;
+        width: 100%;
+        border-bottom: 3px solid purple;
+        box-sizing: border-box;
     }
     #projectsList {
         display: flex;

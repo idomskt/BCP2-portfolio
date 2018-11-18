@@ -5,7 +5,20 @@ body {
 .template, .close {
     display: none;
 }
-header {
+header li a {
+    text-decoration: none;
+}
+.screenFiller h1 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    font-size: 100px;
+    color: #ffbf4c;
+    margin: 0;
+    font-weight: 100;
+}
+/* header {
     background: #ffbf4c;
     border-bottom: 5px solid purple;
     color: white;
@@ -50,16 +63,28 @@ nav ul li a {
 }
 nav ul li a:hover .icon-linkedin {
     font-size: inherit;
+} */
+h2 {
+    font-size: 4em;
+    text-align: center;
 }
 .open {
     display: block;
 }
+.fadeIn {
+    opacity: 1!important;
+    z-index: 1!important;
+}
 * {
     transition: all .5s ease-in-out;
 }
+.outer {
+    max-width: 1200px;
+    margin: auto;
+}
 .screenFiller {
     background-color: black;
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0;
     width: 100%;
@@ -98,6 +123,10 @@ nav ul li a:hover .icon-linkedin {
 }
 .screenFiller li:hover a {
     color: #ffbf4c;
+}
+.selectView {
+    text-align: right;
+    border-bottom: 1px solid #eaeaea;
 }
 .front {
     position: absolute;
@@ -145,7 +174,6 @@ nav ul li a:hover .icon-linkedin {
     height: 38px;
 }
 #projectsList {
-    max-width: 1200px;
     margin: 20px auto 20px auto;
     display: flex;
     flex-wrap: wrap;
@@ -173,6 +201,7 @@ nav ul li a:hover .icon-linkedin {
     top: 0;
     left: 0;
     opacity: 0.75;
+    background-color: black;
     z-index: 0;
 }
 .projectBox:hover .bgOverlay {
@@ -262,7 +291,7 @@ text-align: center;
     box-sizing: border-box;
 }
 .descriptionBox {
-    position: absolute;
+    position: fixed;
     width: 100%;
     height: 100vh;
     top: 0;
@@ -272,7 +301,7 @@ text-align: center;
     color: white;
     padding: 40px;
     box-sizing: border-box;
-    z-index: 1;
+    z-index: 5;
 }
 .popup {
     max-width: 768px;
@@ -311,9 +340,18 @@ text-align: center;
     font-size: 30px;
     border-radius: 4px;
 }
+button {
+    font-size: 20px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+.selectView .fa-image:nth-of-type(2) {
+    font-size: 25px;
+}
 :root {
-    --scroll-left: -400px;
-    --scroll-right: 0px;
+     --scroll-left: -400px; 
+     --scroll-right: 0px; 
 }
 .slider .projectBox:hover {
     transform: none;
@@ -328,30 +366,28 @@ text-align: center;
 }
 .movingImageRight {
     margin-left: var(--scroll-right);
-}
+} 
 .sliderOuter {
     position: relative;
 }
 .slider {
-    max-width: 1200px;
     align-items: center;
     height: 600px;
     display: flex;
-    margin: auto;
     overflow: hidden;
 }
 .visibleSlider {
     display: flex;
 }
 .slider .projectBox {
-    width: 400px;
+    width: 0;
 }
 .sliderNav {
     position: absolute;
     bottom: 0;
     transform: translateX(-50%);
     left: 50%;
-    width: 1350px;
+    z-index: 2;
     top: 50%;
     justify-content: space-between;
     height: 50px;
@@ -369,4 +405,43 @@ border: none;
 }
 .nextBTN {
     float: right;
+}
+#about {
+    display: flex;
+    background-color: #ffbf4c;
+}
+#about > * {
+    width: 55%;
+    position: relative;
+}
+#about .aboutMeIMG {
+    width: 45%;
+}
+.aboutMeContent {
+    position: relative;
+}
+.aboutMeInfo {
+    padding: 30px;
+    box-sizing: border-box;
+    font-size: 30px;
+}
+.stats {
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    z-index: -1;
+}
+.stats ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.stats ul li {
+    width: 30%;
+}
+.aboutMeInfo p {
+    opacity: 0;
+}
+#about img {
+    width: 100%;
 }

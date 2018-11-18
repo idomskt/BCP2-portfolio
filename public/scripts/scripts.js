@@ -19,11 +19,13 @@ function heroScreen() {
 };
 
 const frontPage = () => {
-    $('.allProjects').show();
-    $('#about').hide();
+    // $('.portfolioDisplay').show();
+    // $('#about').hide();
+    $('section').show();
 }
 const aboutPage = () => {
-    $('.allProjects').hide();
+    $('.screenFiller').hide();
+    $('.portfolioDisplay').hide();
     $('#about').show();
 }
 
@@ -37,20 +39,38 @@ function hoverColorForPorjectBox() {
     });
 };
 
-stats = {};
-stats.all = [];
-
-const getGHData = $.getJSON('https://api.github.com/users/idomskt/repos')
-.then(data => data.map(repoName => {stats.all.push(repoName.name)}));
-
-repoList = () => {
-    const ul = $('<ul>');
-    stats.all.map(eachRepo => {
-        return ul.append($('<li>').text(eachRepo))
-    });
-    $('.stats').append(ul);
+function githubStats() {
+    stats = {};
+    stats.all = [];
+    repoList = () => {
+        var ul = $('<ul>');
+        stats.all.map(eachRepo => {
+            return ul.append($('<li>').append($('<a>').attr({'href': eachRepo.url, 'target': '_blank'}).text(eachRepo.name)));
+        });
+        $('.stats').append(ul);
+    };
+    const getGHData = $.getJSON('https://api.github.com/users/idomskt/repos')
+    .then(data => data.map(repoName => {stats.all.push({name:repoName.name, url:repoName.html_url})})).then(repoList);
+    
 }
-function selectPortfolioView() {
-    $('.sliderOuter').toggle();
-    $('.gridView').toggle();
+function selectPortfolioView(e) {
+    const gridView = e.target.classList.contains('fa-th') ? $('.gridView').show() && $('.sliderOuter').hide() : $('.gridView').hide()  && $('.sliderOuter').show();
+}
+
+function switchAboutViews() {
+    $('#about h1').toggleClass('fadeIn');
+    $('.stats').toggleClass('fadeIn');
+    $('.aboutMeInfo p').toggleClass('fadeIn');
+    var $headText = $('#about h1').text() == 'ABOUT ME' ? 'My Repositories' : 'ABOUT ME';
+    var $buttonText = $('#about button').text() == 'View Repositories' ? 'Read Info' : 'View Repositories';
+    $('#about h1').text($headText);
+    $('#about button').text($buttonText);
+}
+
+function menuOpener() {
+    $('.headerInner').toggleClass('openMenu');
+    $('.headerInner i').toggleClass('fas fa-times');
+}
+function closeMenuOnClickedLink() {
+    $('.headerInner').toggleClass('openMenu');
 }

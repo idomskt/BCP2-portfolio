@@ -10,19 +10,15 @@ function sortByRating() {
         function sort_project(a, b){
             return ($(b).data('rating')) > ($(a).data('rating')) ? 1 : -1;    
         }
-    } else {
+    } 
+    else {
         $('#projectsList').html('');
-        $('.visibleSlider').html('');
-        Portfolio.printToScreen();
+        Portfolio.printToScreenGrid();
         $('.projectBox').on('click', buildExpand);
-        $('.projectBox').each(function(){
+        $('#projectsList .projectBox').each(function(){
             randomColor($(this));
             loadStars($(this));
         });
-        $('.slider .projectBox').first().addClass('firstVisible');
-    $('.slider .projectBox:nth-last-child(3)').addClass('lastThree');
-    $('.prevBTN').css('opacity', '0.2');
-    $('.slider').find('.firstVisible').next().addClass('centerImage');
     }
 }
 
